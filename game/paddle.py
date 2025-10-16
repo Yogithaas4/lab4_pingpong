@@ -19,4 +19,4 @@ class Paddle:
         if ball.y < self.y: 
             self.move(-self.speed, screen_height) 
         elif ball.y > self.y + self.height: 
-            self.move(self.speed, screen_height)
+            self.move(self.speed, screen_height) 

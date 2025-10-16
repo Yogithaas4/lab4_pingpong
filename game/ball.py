@@ -69,4 +69,4 @@ class Ball:
         self.velocity_y = random.choice([-3, 3]) 
  
     def rect(self): 
-        return pygame.Rect(self.x, self.y, self.width, self.height) 
+        return pygame.Rect(self.x, self.y, self.width, self.height)
