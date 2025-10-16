@@ -37,14 +37,16 @@ class GameEngine:
         self.ball.move()
         self.ball.check_collision(self.player, self.ai)
 
-        # Scoring logic
+        # ✅ Fixed scoring sound logic
         if self.ball.x <= 0:
             self.ai_score += 1
-            self.ball.sound_score.play()
+            if self.ball.sound_effect:
+                self.ball.sound_effect.play()
             self.ball.reset()
         elif self.ball.x >= self.width:
             self.player_score += 1
-            self.ball.sound_score.play()
+            if self.ball.sound_effect:
+                self.ball.sound_effect.play()
             self.ball.reset()
 
         # AI tracking
